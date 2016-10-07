@@ -28,6 +28,7 @@ especially popular in field of competitive programming.*
 - [Rabin-Karp for String Matching](./string/rabin-karp.html) ([v2](./string/rabin-karp-algorithm.html))
 - [Suffix Array](./string/suffix-array.html)
 - [Z-function](./string/z-function.html)
+- [Prefix function. Knuth-Morris-Pratt algorithm](./string/prefix-function-knuth–morris–pratt.html)
 
 ### Linear Algebra
 - [Gauss & System of linear equation](./linear_algebra/linear-system-gauss.html)
