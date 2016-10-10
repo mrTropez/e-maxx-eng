@@ -37,6 +37,28 @@ Following prefix function definition, we can write following algorithm to comput
 
 Complexity of this trivial algorithm is $O(n^3)$.
 
+## Effective algorithm
+This algorithm was conceived by Donald Knuth and Vaughan Pratt, and independently by James H. Morris. The three published it jointly in 1977
+
+### First optimization
+Let's notice an important thing: value of $\pi[i+1]$ can not exceed value of $\pi[i]$ by more than $1$ for any $i$.
+
+We will proof this statement by contradiction. Let's assume that for some $i$ we have $\pi[i+1] > \pi[i] + 1$. We have a suffix ending in ${i+1}$ position and having length of $\pi[i]$. Let's remove it's last symbol. Now have a suffix, ending in positon $i$ and and having length of $\pi[i+1] - 1$, and it is better than value of prefix function for $i $\pi[i]$, which is a contradiction.
+
+Thus, moving to the element value of prefix function could increase by 1, stay the same or decrease by some number. This way we can already decrese complexity of algorithm to be $O(n^2)$ - given that value can not be increased by more than $1$ in one step, for whole string there be at most $n$ increases by $1$, and (given than value of prefix function could never be negative) at most $n$ decreases. Now we only need to compare $n$ strings, giving complexity of $O(n^2)$
+
+### Second optimization
+
+![example 2](&imgroot&/kmp-2.png)
+
+![example 3](&imgroot&/kmp-3.png)
+
+![example 4](&imgroot&/kmp-4.png)
+
+### Final algorithm
+
+### Implementation
+
 ## Practice Problems
 
 List of tasks that can be solved using preifx function:
